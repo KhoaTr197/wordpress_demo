@@ -12,21 +12,21 @@ Template: idea-flow
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: saas-startup
-Tags: blog, entertainment, news, one-column, two-columns, block-patterns, block-styles, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-site-editing, full-width-template, sticky-post, style-variations, template-editing, threaded-comments, translation-ready, wide-blocks
+Tags: blog, entertainment, news, one-column, two-columns, block-patterns, block-styles, preset-background, preset-colors, preset-header, preset-logo, preset-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-site-editing, full-width-template, sticky-post, style-variations, template-editing, threaded-comments, translation-ready, wide-blocks
 */
 /* style.css */
 
 .dark {
   /* Status Colors */
-  --wp--custom--todo: oklch(0.24 0.02 241.97);
-  --wp--custom--todo-foreground: oklch(0.3 0.04 247.66);
-  --wp--custom--todo-accent: oklch(0.5985 0.165786 249.1642);
-  --wp--custom--in-progress: oklch(0.2509 0.0111 99.35);
-  --wp--custom--in-progress-foreground: oklch(0.3211 0.0226 92.99);
-  --wp--custom--in-progress-accent: oklch(0.7352 0.1168 80.79);
-  --wp--custom--completed: oklch(0.2392 0.0127 160.24);
-  --wp--custom--completed-foreground: oklch(0.3325 0.0302 161.22);
-  --wp--custom--completed-accent: oklch(0.6614 0.1076 161.82);
+  --wp--preset--todo: oklch(0.24 0.02 241.97);
+  --wp--preset--todo-foreground: oklch(0.3 0.04 247.66);
+  --wp--preset--todo-accent: oklch(0.5985 0.165786 249.1642);
+  --wp--preset--in-progress: oklch(0.2509 0.0111 99.35);
+  --wp--preset--in-progress-foreground: oklch(0.3211 0.0226 92.99);
+  --wp--preset--in-progress-accent: oklch(0.7352 0.1168 80.79);
+  --wp--preset--completed: oklch(0.2392 0.0127 160.24);
+  --wp--preset--completed-foreground: oklch(0.3325 0.0302 161.22);
+  --wp--preset--completed-accent: oklch(0.6614 0.1076 161.82);
 
   /* Core Palette Overrides */
   --wp--preset--color--background: oklch(0.141 0.005 285.823);
@@ -35,42 +35,42 @@ Tags: blog, entertainment, news, one-column, two-columns, block-patterns, block-
   --wp--preset--color--primary-foreground: oklch(0.98 0.016 73.684);
   --wp--preset--color--destructive: oklch(0.704 0.191 22.216);
 
-  /* Custom UI Element Overrides */
-  --wp--custom--card: oklch(0.21 0.006 285.885);
-  --wp--custom--card-foreground: oklch(0.985 0 0);
-  --wp--custom--popover: oklch(0.21 0.006 285.885);
-  --wp--custom--popover-foreground: oklch(0.985 0 0);
-  --wp--custom--secondary: oklch(0.274 0.006 286.033);
-  --wp--custom--secondary-foreground: oklch(0.985 0 0);
-  --wp--custom--muted: oklch(0.274 0.006 286.033);
-  --wp--custom--muted-foreground: oklch(0.705 0.015 286.067);
-  --wp--custom--accent: oklch(0.274 0.006 286.033);
-  --wp--custom--accent-foreground: oklch(0.985 0 0);
-  --wp--custom--destructive-foreground: oklch(0.985 0 0);
-  --wp--custom--border: oklch(1 0 0 / 10%);
-  --wp--custom--input: oklch(1 0 0 / 15%);
-  --wp--custom--ring: oklch(0.51 0.23 277);
+  /* preset UI Element Overrides */
+  --wp--preset--card: oklch(0.21 0.006 285.885);
+  --wp--preset--card-foreground: oklch(0.985 0 0);
+  --wp--preset--popover: oklch(0.21 0.006 285.885);
+  --wp--preset--popover-foreground: oklch(0.985 0 0);
+  --wp--preset--secondary: oklch(0.274 0.006 286.033);
+  --wp--preset--secondary-foreground: oklch(0.985 0 0);
+  --wp--preset--muted: oklch(0.274 0.006 286.033);
+  --wp--preset--muted-foreground: oklch(0.705 0.015 286.067);
+  --wp--preset--accent: oklch(0.274 0.006 286.033);
+  --wp--preset--accent-foreground: oklch(0.985 0 0);
+  --wp--preset--destructive-foreground: oklch(0.985 0 0);
+  --wp--preset--border: oklch(1 0 0 / 10%);
+  --wp--preset--input: oklch(1 0 0 / 15%);
+  --wp--preset--ring: oklch(0.51 0.23 277);
 
   /* Charts */
-  --wp--custom--chart-1: oklch(0.488 0.243 264.376);
-  --wp--custom--chart-2: oklch(0.696 0.17 162.48);
-  --wp--custom--chart-3: oklch(0.769 0.188 70.08);
-  --wp--custom--chart-4: oklch(0.627 0.265 303.9);
-  --wp--custom--chart-5: oklch(0.645 0.246 16.439);
+  --wp--preset--chart-1: oklch(0.488 0.243 264.376);
+  --wp--preset--chart-2: oklch(0.696 0.17 162.48);
+  --wp--preset--chart-3: oklch(0.769 0.188 70.08);
+  --wp--preset--chart-4: oklch(0.627 0.265 303.9);
+  --wp--preset--chart-5: oklch(0.645 0.246 16.439);
 
   /* Sidebar */
-  --wp--custom--sidebar: oklch(0.21 0.006 285.885);
-  --wp--custom--sidebar-foreground: oklch(0.985 0 0);
-  --wp--custom--sidebar-primary: oklch(0.51 0.23 277);
-  --wp--custom--sidebar-primary-foreground: oklch(0.98 0.016 73.684);
-  --wp--custom--sidebar-accent: oklch(0.274 0.006 286.033);
-  --wp--custom--sidebar-accent-foreground: oklch(0.985 0 0);
-  --wp--custom--sidebar-border: oklch(1 0 0 / 10%);
-  --wp--custom--sidebar-ring: oklch(0.51 0.23 277);
+  --wp--preset--sidebar: oklch(0.21 0.006 285.885);
+  --wp--preset--sidebar-foreground: oklch(0.985 0 0);
+  --wp--preset--sidebar-primary: oklch(0.51 0.23 277);
+  --wp--preset--sidebar-primary-foreground: oklch(0.98 0.016 73.684);
+  --wp--preset--sidebar-accent: oklch(0.274 0.006 286.033);
+  --wp--preset--sidebar-accent-foreground: oklch(0.985 0 0);
+  --wp--preset--sidebar-border: oklch(1 0 0 / 10%);
+  --wp--preset--sidebar-ring: oklch(0.51 0.23 277);
 }
 
 * {
-  border-color: var(--wp--custom--border);
+  border-color: var(--wp--preset--border);
 }
 body {
   background-color: var(--wp--preset--color--background);

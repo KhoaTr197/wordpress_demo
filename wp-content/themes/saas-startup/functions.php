@@ -39,30 +39,7 @@ function saas_startup_register_required_plugins()
   tgmpa($plugins, $config);
 }
 
-
-function saas_startup_pattern_styles()
-{
-  wp_enqueue_style('saas-startup-patterns', get_stylesheet_directory_uri() . '/assets/css/patterns.css', array(), filemtime(get_template_directory() . '/assets/css/patterns.css'));
-  if (is_admin()) {
-    global $pagenow;
-    if ('site-editor.php' === $pagenow) {
-      // Do not enqueue editor style in site editor
-      return;
-    }
-    wp_enqueue_style('saas-startup-editor', get_stylesheet_directory_uri() . '/assets/css/editor.css', array(), filemtime(get_template_directory() . '/assets/css/editor.css'));
-  }
-}
-add_action('enqueue_block_assets', 'saas_startup_pattern_styles');
-
-
 add_theme_support('wp-block-styles');
-
-// Removes the default wordpress patterns
-add_action('init', function () {
-  remove_theme_support('core-block-patterns');
-});
-
-
 
 function saas_startup_block_editor()
 {
@@ -80,6 +57,70 @@ function saas_startup_remove_parent_tgmpa()
 }
 add_action('after_setup_theme', 'saas_startup_remove_parent_tgmpa', 0);
 
+function studib_register_ctp()
+{
+  // Task
+  $task_labels = array(
+    'name' => 'Tasks',
+    'singular_name' => 'Task',
+    'add_new' => 'Add New Task',
+    'add_new_item' => 'Add New Task',
+    'edit_item' => 'Edit Task',
+    'all_items' => 'All Tasks',
+  );
+  $task_args = array(
+    'labels' => $task_labels,
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-list-view',
+    'supports' => array('title', 'editor', 'custom-fields'),
+    'show_in_rest' => true, // Kích hoạt Gutenberg editor
+    'rewrite' => array('slug' => 'tasks'),
+  );
+  register_post_type('studib_task', $task_args);
+
+  // Event
+  $event_labels = array(
+    'name' => 'Events',
+    'singular_name' => 'Event',
+    'add_new' => 'Add New Event',
+    'add_new_item' => 'Add New Event',
+    'edit_item' => 'Edit Event',
+    'all_items' => 'All Events',
+  );
+  $event_args = array(
+    'labels' => $event_labels,
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-calendar-alt',
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'),
+    'show_in_rest' => true, // Kích hoạt Gutenberg editor
+    'rewrite' => array('slug' => 'events'),
+  );
+  register_post_type('studib_event', $event_args);
+
+  // Note
+  $note_labels = array(
+    'name' => 'Notes',
+    'singular_name' => 'Note',
+    'add_new' => 'Add New Note',
+    'add_new_item' => 'Add New Note',
+    'edit_item' => 'Edit Note',
+    'all_items' => 'All Notes',
+  );
+  $note_args = array(
+    'labels' => $note_labels,
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-edit',
+    'supports' => array('title', 'editor'),
+    'show_in_rest' => true, // Kích hoạt Gutenberg editor
+    'rewrite' => array('slug' => 'notes'),
+  );
+  register_post_type('studib_note', $note_args);
+}
+do_action("init", "studib_register_cpt");
+
 function studib_register_block_variant()
 {
   // Button
@@ -93,3 +134,66 @@ function studib_register_block_variant()
   );
 }
 add_action("init", "studib_register_block_variant");
+
+function studib_display_tasks_shortcode()
+{
+  $args = array(
+    'post_type' => 'studib_task', // Thay bằng slug của bạn
+    'posts_per_page' => 5,
+  );
+
+  $query = new WP_Query($args);
+  $output = '<div class="task-list">';
+
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $output .= '<h2>' . get_the_title() . '</h2>';
+      $output .= '<div>' . get_the_excerpt() . '</div>';
+    }
+    wp_reset_postdata();
+  } else {
+    $output .= 'Không có task nào.';
+  }
+
+  $output .= '</div>';
+  return $output;
+}
+add_shortcode('tasks', 'studib_display_tasks_shortcode');
+
+
+add_shortcode('custom_signup_form', 'render_mock_signup_form');
+function render_mock_signup_form()
+{
+  ob_start(); ?>
+  <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+    <input type="hidden" name="action" value="mock_signup_action">
+
+    <label>Username: <input type="text" name="username" required></label><br><br>
+    <label>Password: <input type="password" name="password" required></label><br><br>
+    <button type="submit">Create Account</button>
+  </form>
+  <?php return ob_get_clean();
+}
+
+
+add_shortcode('custom_login_form', 'render_mock_login_form');
+function render_mock_login_form()
+{
+  ob_start(); ?>
+  <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+    <input type="hidden" name="action" value="mock_login_action">
+
+    <?php if (isset($_GET['status']) && $_GET['status'] == 'signup_success'): ?>
+      <p style="color: green;">Sign up successful! Please log in.</p>
+    <?php endif; ?>
+    <?php if (isset($_GET['status']) && $_GET['status'] == 'login_failed'): ?>
+      <p style="color: red;">Invalid mock credentials!</p>
+    <?php endif; ?>
+
+    <label>Username: <input type="text" name="username" required></label><br><br>
+    <label>Password: <input type="password" name="password" required></label><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <?php return ob_get_clean();
+}

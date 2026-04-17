@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 2,
+  "version": 3,
   "customTemplates": [
     {
       "name": "blank",
@@ -75,6 +75,186 @@
           "color": "oklch(0.577 0.245 27.325)",
           "name": "Destructive",
           "slug": "destructive"
+        },
+        {
+          "color": "oklch(0.9792 0.0067 233.64)",
+          "name": "Todo",
+          "slug": "todo"
+        },
+        {
+          "color": "oklch(1 0 0)",
+          "name": "Todo Foreground",
+          "slug": "todo-foreground"
+        },
+        {
+          "color": "oklch(0.5985 0.165786 249.1642)",
+          "name": "Todo Accent",
+          "slug": "todo-accent"
+        },
+        {
+          "color": "oklch(0.9844 0.0108 95.16)",
+          "name": "In Progress",
+          "slug": "in-progress"
+        },
+        {
+          "color": "oklch(1 0 0)",
+          "name": "In Progress Foreground",
+          "slug": "in-progress-foreground"
+        },
+        {
+          "color": "oklch(0.7352 0.1168 80.79)",
+          "name": "In Progress Accent",
+          "slug": "in-progress-accent"
+        },
+        {
+          "color": "oklch(0.9793 0.0041 157.18)",
+          "name": "Completed",
+          "slug": "completed"
+        },
+        {
+          "color": "oklch(1 0 0)",
+          "name": "Completed Foreground",
+          "slug": "completed-foreground"
+        },
+        {
+          "color": "oklch(0.6614 0.1076 161.82)",
+          "name": "Completed Accent",
+          "slug": "completed-accent"
+        },
+        {
+          "color": "oklch(1 0 0)",
+          "name": "Card",
+          "slug": "card"
+        },
+        {
+          "color": "oklch(0.141 0.005 285.823)",
+          "name": "Card Foreground",
+          "slug": "card-foreground"
+        },
+        {
+          "color": "oklch(1 0 0)",
+          "name": "Popover",
+          "slug": "popover"
+        },
+        {
+          "color": "oklch(0.141 0.005 285.823)",
+          "name": "Popover Foreground",
+          "slug": "popover-foreground"
+        },
+        {
+          "color": "oklch(0.967 0.001 286.375)",
+          "name": "Secondary",
+          "slug": "secondary"
+        },
+        {
+          "color": "oklch(0.21 0.006 285.885)",
+          "name": "Secondary Foreground",
+          "slug": "secondary-foreground"
+        },
+        {
+          "color": "oklch(0.967 0.001 286.375)",
+          "name": "Muted",
+          "slug": "muted"
+        },
+        {
+          "color": "oklch(0.552 0.016 285.938)",
+          "name": "Muted Foreground",
+          "slug": "muted-foreground"
+        },
+        {
+          "color": "oklch(0.967 0.001 286.375)",
+          "name": "Accent",
+          "slug": "accent"
+        },
+        {
+          "color": "oklch(0.21 0.006 285.885)",
+          "name": "Accent Foreground",
+          "slug": "accent-foreground"
+        },
+        {
+          "color": "oklch(0.985 0 0)",
+          "name": "Destructive Foreground",
+          "slug": "destructive-foreground"
+        },
+        {
+          "color": "oklch(0.92 0.004 286.32)",
+          "name": "Border",
+          "slug": "border"
+        },
+        {
+          "color": "oklch(0.92 0.004 286.32)",
+          "name": "Input",
+          "slug": "input"
+        },
+        {
+          "color": "oklch(0.51 0.23 277)",
+          "name": "Ring",
+          "slug": "ring"
+        },
+        {
+          "color": "oklch(0.646 0.222 41.116)",
+          "name": "Chart 1",
+          "slug": "chart-1"
+        },
+        {
+          "color": "oklch(0.6 0.118 184.704)",
+          "name": "Chart 2",
+          "slug": "chart-2"
+        },
+        {
+          "color": "oklch(0.398 0.07 227.392)",
+          "name": "Chart 3",
+          "slug": "chart-3"
+        },
+        {
+          "color": "oklch(0.828 0.189 84.429)",
+          "name": "Chart 4",
+          "slug": "chart-4"
+        },
+        {
+          "color": "oklch(0.769 0.188 70.08)",
+          "name": "Chart 5",
+          "slug": "chart-5"
+        },
+        {
+          "color": "oklch(0.985 0 0)",
+          "name": "Sidebar",
+          "slug": "sidebar"
+        },
+        {
+          "color": "oklch(0.141 0.005 285.823)",
+          "name": "Sidebar Foreground",
+          "slug": "sidebar-foreground"
+        },
+        {
+          "color": "oklch(0.51 0.23 277)",
+          "name": "Sidebar Primary",
+          "slug": "sidebar-primary"
+        },
+        {
+          "color": "oklch(0.98 0.016 73.684)",
+          "name": "Sidebar Primary Foreground",
+          "slug": "sidebar-primary-foreground"
+        },
+        {
+          "color": "oklch(0.967 0.001 286.375)",
+          "name": "Sidebar Accent",
+          "slug": "sidebar-accent"
+        },
+        {
+          "color": "oklch(0.21 0.006 285.885)",
+          "name": "Sidebar Accent Foreground",
+          "slug": "sidebar-accent-foreground"
+        },
+        {
+          "color": "oklch(0.92 0.004 286.32)",
+          "name": "Sidebar Border",
+          "slug": "sidebar-border"
+        },
+        {
+          "color": "oklch(0.51 0.23 277)",
+          "name": "Sidebar Ring",
+          "slug": "sidebar-ring"
         }
       ]
     },
@@ -88,43 +268,7 @@
       "radius-md": "calc(var(--wp--custom--radius) - 2px)",
       "radius-lg": "var(--wp--custom--radius)",
       "radius-xl": "calc(var(--wp--custom--radius) + 4px)",
-      "radius-full": "9999px",
-      "todo": "oklch(0.9792 0.0067 233.64)",
-      "todo-foreground": "oklch(1 0 0)",
-      "todo-accent": "oklch(0.5985 0.165786 249.1642)",
-      "inProgress": "oklch(0.9844 0.0108 95.16)",
-      "inProgress-foreground": "oklch(1 0 0)",
-      "inProgress-accent": "oklch(0.7352 0.1168 80.79)",
-      "completed": "oklch(0.9793 0.0041 157.18)",
-      "completed-foreground": "oklch(1 0 0)",
-      "completed-accent": "oklch(0.6614 0.1076 161.82)",
-      "card": "oklch(1 0 0)",
-      "card-foreground": "oklch(0.141 0.005 285.823)",
-      "popover": "oklch(1 0 0)",
-      "popover-foreground": "oklch(0.141 0.005 285.823)",
-      "secondary": "oklch(0.967 0.001 286.375)",
-      "secondary-foreground": "oklch(0.21 0.006 285.885)",
-      "muted": "oklch(0.967 0.001 286.375)",
-      "muted-foreground": "oklch(0.552 0.016 285.938)",
-      "accent": "oklch(0.967 0.001 286.375)",
-      "accent-foreground": "oklch(0.21 0.006 285.885)",
-      "destructive-foreground": "oklch(0.985 0 0)",
-      "border": "oklch(0.92 0.004 286.32)",
-      "input": "oklch(0.92 0.004 286.32)",
-      "ring": "oklch(0.51 0.23 277)",
-      "chart-1": "oklch(0.646 0.222 41.116)",
-      "chart-2": "oklch(0.6 0.118 184.704)",
-      "chart-3": "oklch(0.398 0.07 227.392)",
-      "chart-4": "oklch(0.828 0.189 84.429)",
-      "chart-5": "oklch(0.769 0.188 70.08)",
-      "sidebar": "oklch(0.985 0 0)",
-      "sidebar-foreground": "oklch(0.141 0.005 285.823)",
-      "sidebar-primary": "oklch(0.51 0.23 277)",
-      "sidebar-primary-foreground": "oklch(0.98 0.016 73.684)",
-      "sidebar-accent": "oklch(0.967 0.001 286.375)",
-      "sidebar-accent-foreground": "oklch(0.21 0.006 285.885)",
-      "sidebar-border": "oklch(0.92 0.004 286.32)",
-      "sidebar-ring": "oklch(0.51 0.23 277)"
+      "radius-full": "9999px"
     },
     "layout": {
       "contentSize": "1200px",
@@ -264,9 +408,20 @@
     "blocks": {
       "core/button": {
         "border": {
-          "color": "var(--wp--custom--border)",
+          "color": "var(--wp--preset--color--border)",
           "style": "solid",
-          "width": "1px"
+          "width": "1px",
+          "radius": "var(--wp--custom--radius-full)"
+        },
+        "css": "&:hover { transform: translateY(2px); transition: transform 0.1s ease; }",
+        "elements": {
+          "link": {
+            ":hover": {
+              "color": {
+                "background": "color-mix(in oklab, var(--wp--preset--color--primary) 50%, transparent)"
+              }
+            }
+          }
         },
         "variations": {
           "primary": {
@@ -362,11 +517,6 @@
               }
             }
           }
-        }
-      },
-      "core/post-terms": {
-        "typography": {
-          "fontSize": "var(--wp--preset--font-size--small)"
         }
       },
       "core/post-title": {
@@ -604,6 +754,33 @@
       },
       "core/separator": {
         "css": " &:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull){width: 100px}"
+      },
+      "core/post-terms": {
+        "spacing": {
+          "margin": {
+            "top": "1rem"
+          }
+        },
+        "elements": {
+          "link": {
+            "color": {
+              "background": "var(--wp--preset--color--muted) !important",
+              "text": "var(--wp--preset--color--muted-foreground) !important"
+            },
+            "border": {
+              "radius": "var(--wp--custom--radius-full) !important"
+            },
+            "spacing": {
+              "padding": {
+                "top": "0.5rem !important",
+                "bottom": "0.5rem !important",
+                "left": "1rem !important",
+                "right": "1rem !important"
+              }
+            },
+            "css": "&:hover { filter: brightness(1.1); transform: translateY(-1px); transition: all 0.2s ease; }"
+          }
+        }
       }
     },
     "color": {
@@ -611,24 +788,25 @@
       "text": "var(--wp--preset--color--foreground)"
     },
     "elements": {
+      "header": {
+        "border": {
+          "width": "1px",
+          "style": "solid",
+          "color": "var(--wp--preset--color--border)"
+        }
+      },
       "button": {
         "typography": {
           "fontWeight": "600",
           "fontSize": "var(--wp--preset--font-size--superbfont-small)"
         },
         "border": {
-          "color": "var(--wp--custom--ring)",
-          "radius": "var(--wp--custom--radius-lg)"
+          "color": "var(--wp--preset--color--ring)",
+          "radius": "var(--wp--custom--radius-xl)"
         },
         "color": {
           "background": "var(--wp--preset--color--primary)",
           "text": "var(--wp--preset--color--primary-foreground)"
-        },
-        ":hover": {
-          "color": {
-            "background": "var(--wp--preset--color--primary-hover)",
-            "text": "var(--wp--preset--color--white)"
-          }
         },
         ":focus": {
           "color": {
