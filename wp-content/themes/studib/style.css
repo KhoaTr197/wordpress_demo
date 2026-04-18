@@ -1,0 +1,92 @@
+/*
+Theme Name: Studib
+Description: A professional child theme for the Studib design system.
+Author: khoa.tran
+Template: idea-flow
+Version: 1.0.0
+*/
+.dark {
+  /* Status Colors */
+  --wp--preset--todo: oklch(0.24 0.02 241.97);
+  --wp--preset--todo-foreground: oklch(0.3 0.04 247.66);
+  --wp--preset--todo-accent: oklch(0.5985 0.165786 249.1642);
+  --wp--preset--in-progress: oklch(0.2509 0.0111 99.35);
+  --wp--preset--in-progress-foreground: oklch(0.3211 0.0226 92.99);
+  --wp--preset--in-progress-accent: oklch(0.7352 0.1168 80.79);
+  --wp--preset--completed: oklch(0.2392 0.0127 160.24);
+  --wp--preset--completed-foreground: oklch(0.3325 0.0302 161.22);
+  --wp--preset--completed-accent: oklch(0.6614 0.1076 161.82);
+
+  /* Core Palette Overrides */
+  --wp--preset--color--background: oklch(0.141 0.005 285.823);
+  --wp--preset--color--foreground: oklch(0.985 0 0);
+  --wp--preset--color--primary: oklch(0.51 0.23 277);
+  --wp--preset--color--primary-foreground: oklch(0.98 0.016 73.684);
+  --wp--preset--color--destructive: oklch(0.704 0.191 22.216);
+
+  /* preset UI Element Overrides */
+  --wp--preset--card: oklch(0.21 0.006 285.885);
+  --wp--preset--card-foreground: oklch(0.985 0 0);
+  --wp--preset--popover: oklch(0.21 0.006 285.885);
+  --wp--preset--popover-foreground: oklch(0.985 0 0);
+  --wp--preset--secondary: oklch(0.274 0.006 286.033);
+  --wp--preset--secondary-foreground: oklch(0.985 0 0);
+  --wp--preset--muted: oklch(0.274 0.006 286.033);
+  --wp--preset--muted-foreground: oklch(0.705 0.015 286.067);
+  --wp--preset--accent: oklch(0.274 0.006 286.033);
+  --wp--preset--accent-foreground: oklch(0.985 0 0);
+  --wp--preset--destructive-foreground: oklch(0.985 0 0);
+  --wp--preset--border: oklch(1 0 0 / 10%);
+  --wp--preset--input: oklch(1 0 0 / 15%);
+  --wp--preset--ring: oklch(0.51 0.23 277);
+
+  /* Charts */
+  --wp--preset--chart-1: oklch(0.488 0.243 264.376);
+  --wp--preset--chart-2: oklch(0.696 0.17 162.48);
+  --wp--preset--chart-3: oklch(0.769 0.188 70.08);
+  --wp--preset--chart-4: oklch(0.627 0.265 303.9);
+  --wp--preset--chart-5: oklch(0.645 0.246 16.439);
+
+  /* Sidebar */
+  --wp--preset--sidebar: oklch(0.21 0.006 285.885);
+  --wp--preset--sidebar-foreground: oklch(0.985 0 0);
+  --wp--preset--sidebar-primary: oklch(0.51 0.23 277);
+  --wp--preset--sidebar-primary-foreground: oklch(0.98 0.016 73.684);
+  --wp--preset--sidebar-accent: oklch(0.274 0.006 286.033);
+  --wp--preset--sidebar-accent-foreground: oklch(0.985 0 0);
+  --wp--preset--sidebar-border: oklch(1 0 0 / 10%);
+  --wp--preset--sidebar-ring: oklch(0.51 0.23 277);
+}
+
+html {
+  font-size: 16px;
+}
+.has-text-xs-font-size {
+  line-height: calc(1 / 0.75);
+}
+.has-text-sm-font-size {
+  line-height: calc(1.25 / 0.875);
+}
+.has-text-base-font-size {
+  line-height: 1.5;
+}
+.has-text-lg-font-size {
+  line-height: calc(1.75 / 1.125);
+}
+.has-text-xl-font-size {
+  line-height: 1.4;
+}
+.has-text-2xl-font-size {
+  line-height: 1.333;
+}
+.has-text-3xl-font-size {
+  line-height: 1.2;
+}
+
+body.block-editor-iframe__body.editor-styles-wrapper.post-type-page,
+body.block-editor-iframe__body.editor-styles-wrapper.post-type-post {
+  padding: 0px 2rem;
+}
+.editor-styles-wrapper {
+  padding: 0px 4rem !important;
+}

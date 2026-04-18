@@ -129,7 +129,6 @@ function studib_register_block_variant()
     array(
       'name' => 'primary',
       'label' => __("Primary", "SaaS Startup"),
-      'is_default' => true,
     )
   );
 }

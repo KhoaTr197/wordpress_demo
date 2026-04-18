@@ -413,16 +413,6 @@
           "width": "1px",
           "radius": "var(--wp--custom--radius-full)"
         },
-        "css": "&:hover { transform: translateY(2px); transition: transform 0.1s ease; }",
-        "elements": {
-          "link": {
-            ":hover": {
-              "color": {
-                "background": "color-mix(in oklab, var(--wp--preset--color--primary) 50%, transparent)"
-              }
-            }
-          }
-        },
         "variations": {
           "primary": {
             "color": {
@@ -799,10 +789,6 @@
         "typography": {
           "fontWeight": "600",
           "fontSize": "var(--wp--preset--font-size--superbfont-small)"
-        },
-        "border": {
-          "color": "var(--wp--preset--color--ring)",
-          "radius": "var(--wp--custom--radius-xl)"
         },
         "color": {
           "background": "var(--wp--preset--color--primary)",
