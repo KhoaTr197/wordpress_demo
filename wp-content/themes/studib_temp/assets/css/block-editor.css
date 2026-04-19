@@ -1,0 +1,9 @@
+.superbthemes-force-nav-white nav .wp-block-navigation__responsive-container.is-menu-open,
+.superbthemes-force-nav-white .wp-block-navigation__responsive-container-content ul li.has-child ul {
+    background: white !important;
+    color: black !important;
+}
+
+.superbthemes-force-nav-white .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container * {
+color: black !important;	
+}
