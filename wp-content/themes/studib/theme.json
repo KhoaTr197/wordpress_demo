@@ -274,6 +274,24 @@
       ]
     },
     "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"JetBrains Mono\", \"Inter\", monospace",
+          "name": "JetBrains Mono",
+          "slug": "jetbrains-mono",
+          "fontFace": [
+            {
+              "fontFamily": "JetBrains Mono",
+              "fontWeight": "100 800",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "https://fonts.gstatic.com/s/jetbrainsmono/v18/tMe62o-9oODrqPztz2qXipt905mZ7DNC92p6.woff2"
+              ]
+            }
+          ]
+        }
+      ],
       "fluid": true,
       "fontSizes": [
         {
@@ -368,6 +386,9 @@
     "useRootPaddingAwareAlignments": true
   },
   "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--jetbrains-mono)"
+    },
     "color": {
       "background": "var(--wp--preset--color--background)",
       "text": "var(--wp--preset--color--foreground)"
@@ -403,7 +424,7 @@
       "button": {
         "typography": {
           "fontWeight": "600",
-          "fontSize": "var(--wp--preset--font-size--small)"
+          "fontSize": "var(--wp--preset--font-size--text-sm)"
         },
         "color": {
           "background": "var(--wp--preset--color--primary)",
