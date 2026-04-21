@@ -4,11 +4,6 @@
  * Template Post Type: page
  */
 
-if (is_user_logged_in()) {
-  wp_redirect(home_url('/dashboard'));
-  exit;
-}
-
 get_header('auth'); ?>
 
 <div class="relative bg-gray-100 flex min-h-screen flex-col items-center justify-center p-6 md:p-10">
