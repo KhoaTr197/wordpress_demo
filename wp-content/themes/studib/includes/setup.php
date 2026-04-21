@@ -30,12 +30,7 @@ add_action('wp_enqueue_scripts', 'studib_child_enqueue_styles', 20);
 
 function studib_force_login_template($template)
 {
-  // // Debugging block
-  // echo '<pre>';
-  // var_dump('Custom Template Found: ');
-  // die('Filter is running!');
-
-  if (is_page('login')) {
+  if (is_page('login') && !is_user_logged_in()) {
     $custom_template = locate_template('templates/page-login.php');
 
     if ($custom_template) {
